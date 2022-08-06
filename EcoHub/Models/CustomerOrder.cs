@@ -1,17 +1,16 @@
 ﻿namespace EcoHub.Models
 {
-    using EcoHub.Constants;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table(nameof(Order))]
-    public class Order
+    public class CustomerOrder
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string? OrderNumber { get; set; }
-        public OrderStatus? Status { get; set; }
-        public virtual IList<SupplierProduct>? MenuItems { get; set; }
+        public virtual IList<SupplierProduct>? SupplierProducts { get; set; }
     }
+}
 }

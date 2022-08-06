@@ -1,11 +1,17 @@
 ﻿using EcoHub.Data;
 using EcoHub.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EcoHub.Services
 {
     public class SupplierProductService : ISupplierProductService
     {
         private readonly EcoHubContext db;
+
+        public SupplierProductService(EcoHubContext dbContext)
+        {
+            db = dbContext;
+        }
         public void AddNewProduct(SupplierProduct product)
         {
             if (product != null)
@@ -15,9 +21,11 @@ namespace EcoHub.Services
             }
         }
 
-        public async Task<List<SupplierProduct>> GetAllProducts()
+        public async Task<List<SupplierProduct>> GetAllProductsBySupplier(SupplierProduct supplierProduct)
         {
-            return db.SupplierProducts.ToList();
+            var supplierProductsList =
+                await db.SupplierProducts.Where(supp => supp.User.Id == supplierProduct.User.Id).ToListAsync();
+            return supplierProductsList;
         }
 
         public async Task<SupplierProduct> GetProductById(int id)
@@ -25,9 +33,17 @@ namespace EcoHub.Services
             return await db.SupplierProducts.FindAsync(id);
         }
 
-        public Task<SupplierProduct> UpdateProduct(SupplierProduct supplier)
+        public async Task<string> UpdateProduct(SupplierProduct product)
         {
-            throw new NotImplementedException();
+            SupplierProduct exists = await db.SupplierProducts.FindAsync(product);
+            if(exists != null)
+            {
+                exists.Name = product.Name;
+                exists.Price = product.Price;
+                exists.Approved = product.Approved;
+                exists.Flagged = product.Flagged;
+            }
+            return "Updated";
         }
     }
 }

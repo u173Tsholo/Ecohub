@@ -4,9 +4,9 @@ namespace EcoHub.Services
 {
     public interface ISupplierProductService
     {
-        public Task<List<SupplierProduct>> GetAllProducts();
+        public Task<List<SupplierProduct>> GetAllProductsBySupplier(SupplierProduct supplierProduct);
         public Task<SupplierProduct> GetProductById(int id);
-        public Task<SupplierProduct> UpdateProduct(SupplierProduct supplier);
+        public Task<string> UpdateProduct(SupplierProduct supplier);
         public void AddNewProduct(SupplierProduct product);
 
     }
