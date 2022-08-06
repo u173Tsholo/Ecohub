@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ecohub\\EcoHub\\EcoHub.csproj": {}
+    "C:\\Users\\thenj\\Desktop\\Ecohub\\EcoHub\\EcoHub.csproj": {}
   },
   "projects": {
-    "C:\\Ecohub\\EcoHub\\EcoHub.csproj": {
+    "C:\\Users\\thenj\\Desktop\\Ecohub\\EcoHub\\EcoHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ecohub\\EcoHub\\EcoHub.csproj",
+        "projectUniqueName": "C:\\Users\\thenj\\Desktop\\Ecohub\\EcoHub\\EcoHub.csproj",
         "projectName": "EcoHub",
-        "projectPath": "C:\\Ecohub\\EcoHub\\EcoHub.csproj",
-        "packagesPath": "C:\\Users\\tsholofelo.gomba\\.nuget\\packages\\",
-        "outputPath": "C:\\Ecohub\\EcoHub\\obj\\",
+        "projectPath": "C:\\Users\\thenj\\Desktop\\Ecohub\\EcoHub\\EcoHub.csproj",
+        "packagesPath": "C:\\Users\\thenj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thenj\\Desktop\\Ecohub\\EcoHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tsholofelo.gomba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thenj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

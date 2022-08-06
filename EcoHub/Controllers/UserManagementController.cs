@@ -1,83 +1,26 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EcoHub.Data;
+using EcoHub.Models;
+using EcoHub.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcoHub.Controllers
 {
+    [Route("controller")]
+    [ApiController]
     public class UserManagementController : Controller
     {
-        // GET: UserManagementController
-        public ActionResult Index()
+        private readonly IUserManagementService _service;
+        public UserManagementController(IUserManagementService service)
         {
-            return View();
+            _service = service;
+        }
+        
+        [HttpPost(Name = "AddNewUser")]
+        public void AddNewUser(User user)
+        {
+             _service.CreateUser(user);
         }
 
-        // GET: UserManagementController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: UserManagementController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: UserManagementController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: UserManagementController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: UserManagementController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: UserManagementController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: UserManagementController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

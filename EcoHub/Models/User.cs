@@ -11,11 +11,8 @@ namespace EcoHub.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int Id { get; set; }
         public string? Name { get; set; }
-        public string? Password { get; set; }
-        public string? Email { get; set; }
 
-        public string? Phonenumber { get; set; }
-
+        [ForeignKey("UserTypeId")]
         public UserType? UserType { get; set; }
     }
 }
