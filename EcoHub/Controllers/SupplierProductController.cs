@@ -14,10 +14,10 @@ namespace EcoHub.Controllers
             _supplierProduct = supplierProductService;
         }
 
-        [HttpGet(Name = "GetAllProductsBySupplier")]
-        public async Task GetAllProductsBySupplier(SupplierProduct supplierProduct)
+        [HttpGet(Name = "GetAllProductsByEmail")]
+        public async Task<List<SupplierProduct>> GetAllProductsBySupplier(string email)
         {
-            await _supplierProduct.GetAllProductsBySupplier(supplierProduct);
+            return await _supplierProduct.GetAllProductsBySupplier(email);
         }
 
         [HttpPost(Name = "AddNewProduct")]

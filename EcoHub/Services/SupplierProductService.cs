@@ -21,16 +21,22 @@ namespace EcoHub.Services
             }
         }
 
-        public async Task<List<SupplierProduct>> GetAllProductsBySupplier(SupplierProduct supplierProduct)
+        public async Task<List<SupplierProduct>> GetAllProductsBySupplier(string email)
         {
             var supplierProductsList =
-                await db.SupplierProducts.Where(supp => supp.User.Id == supplierProduct.User.Id).ToListAsync();
+                await db.SupplierProducts.Where(supp => supp.User.NormalizedEmail == email).ToListAsync();
             return supplierProductsList;
         }
 
-        public async Task<SupplierProduct> GetProductById(int id)
+        public User GetUserById(int id)
         {
-            return await db.SupplierProducts.FindAsync(id);
+            User temp = db.Users.FirstOrDefault(u => u.Id == id);
+            return null;
+        }
+
+        public async Task<SupplierProduct> GetProductByEmail(string email)
+        {
+            return await db.SupplierProducts.FindAsync(email);
         }
 
         public async Task<string> UpdateProduct(SupplierProduct product)
@@ -45,5 +51,6 @@ namespace EcoHub.Services
             }
             return "Updated";
         }
+
     }
 }
