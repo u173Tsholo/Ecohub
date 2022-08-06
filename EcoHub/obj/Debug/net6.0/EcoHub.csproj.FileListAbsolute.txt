@@ -1,0 +1,7 @@
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.csproj.AssemblyReference.cache
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.AssemblyInfoInputs.cache
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.AssemblyInfo.cs
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.csproj.CoreCompileInputs.cache
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thenj\Desktop\INF 370 2022\Coding\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.MvcApplicationPartsAssemblyInfo.cache

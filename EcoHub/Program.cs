@@ -1,5 +1,6 @@
 using EcoHub.Data;
 using EcoHub.Helpers;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,9 @@ var app = builder.Build();
 
 var connectionString = builder.Configuration.GetConnectionString(nameof(EcoHubContext));
 builder.Services.AddDbContext<EcoHubContext>(options => options.UseNpgsql(connectionString));
-//builder.Services.AddTransient<IMenuItemService, MenuItemService>();
-//builder.Services.AddTransient<IOrderService, OrderService>();
+//builder.Services.AddTransient<ISupplierProductService, SupplierProductService>();
+//builder.Services.AddTransient<ICustomerProductService, CustomerProductService>();
+//builder.Services.AddTransient<IUserManagementService, UserManagementService>();
 builder.Services.AddTransient(x => new OrderNumberGenerator());
 
 // Configure the HTTP request pipeline.

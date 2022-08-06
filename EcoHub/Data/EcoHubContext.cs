@@ -8,7 +8,7 @@ namespace EcoHub.Data
         public EcoHubContext(DbContextOptions options) : base(options) { }
         public DbSet<UserType> UserTypes { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<SupplierProduct> SupplierProducsts { get; set; }
+        public DbSet<SupplierProduct> SupplierProducts { get; set; }
         public DbSet<Order> Orders { get; set; }
 
     }

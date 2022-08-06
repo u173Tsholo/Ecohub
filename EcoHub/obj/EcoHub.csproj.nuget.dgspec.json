@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Mentorship\\EcoHub\\EcoHub\\EcoHub.csproj": {}
+    "C:\\Users\\thenj\\Desktop\\INF 370 2022\\Coding\\Ecohub\\EcoHub\\EcoHub.csproj": {}
   },
   "projects": {
-    "C:\\Mentorship\\EcoHub\\EcoHub\\EcoHub.csproj": {
+    "C:\\Users\\thenj\\Desktop\\INF 370 2022\\Coding\\Ecohub\\EcoHub\\EcoHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mentorship\\EcoHub\\EcoHub\\EcoHub.csproj",
+        "projectUniqueName": "C:\\Users\\thenj\\Desktop\\INF 370 2022\\Coding\\Ecohub\\EcoHub\\EcoHub.csproj",
         "projectName": "EcoHub",
-        "projectPath": "C:\\Mentorship\\EcoHub\\EcoHub\\EcoHub.csproj",
-        "packagesPath": "C:\\Users\\tsholofelo.gomba\\.nuget\\packages\\",
-        "outputPath": "C:\\Mentorship\\EcoHub\\EcoHub\\obj\\",
+        "projectPath": "C:\\Users\\thenj\\Desktop\\INF 370 2022\\Coding\\Ecohub\\EcoHub\\EcoHub.csproj",
+        "packagesPath": "C:\\Users\\thenj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thenj\\Desktop\\INF 370 2022\\Coding\\Ecohub\\EcoHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tsholofelo.gomba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thenj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,9 +43,35 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -70,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
