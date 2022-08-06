@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EcoHub.Services
 {
-    public interface CustomerProductService : ICustomerProductService
+    public class CustomerProductService : ICustomerProductService
     {
         private readonly EcoHubContext db;
 

@@ -13,4 +13,3 @@
         public virtual IList<SupplierProduct>? SupplierProducts { get; set; }
     }
 }
-}
