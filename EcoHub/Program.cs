@@ -1,5 +1,8 @@
 using EcoHub.Data;
 using EcoHub.Helpers;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
 using EcoHub.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +20,10 @@ var app = builder.Build();
 var connectionString = builder.Configuration.GetConnectionString(nameof(EcoHubContext));
 builder.Services.AddDbContext<EcoHubContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddTransient<ISupplierProductService, SupplierProductService>();
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<EcoHubContext>();
+
 //builder.Services.AddTransient<ICustomerProductService, CustomerProductService>();
 //builder.Services.AddTransient<IUserManagementService, UserManagementService>();
 builder.Services.AddTransient(x => new OrderNumberGenerator());
@@ -29,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 
