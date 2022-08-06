@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EcoHub.Services
 {
-    public class SupplierProductService : ISupplierProductService
+    public class SupplierService : ISupplierService
     {
         private readonly EcoHubContext db;
 
-        public SupplierProductService(EcoHubContext dbContext)
+        public SupplierService(EcoHubContext dbContext)
         {
             db = dbContext;
         }
@@ -42,7 +42,7 @@ namespace EcoHub.Services
         public async Task<string> UpdateProduct(SupplierProduct product)
         {
             SupplierProduct exists = await db.SupplierProducts.FindAsync(product);
-            if(exists != null)
+            if (exists != null)
             {
                 exists.Name = product.Name;
                 exists.Price = product.Price;
@@ -51,6 +51,5 @@ namespace EcoHub.Services
             }
             return "Updated";
         }
-
     }
 }
