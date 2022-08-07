@@ -1,4 +1,5 @@
 ﻿using EcoHub.Data;
+using EcoHub.Helpers;
 using EcoHub.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,9 +9,12 @@ namespace EcoHub.Services
     {
         private readonly EcoHubContext db;
 
-        public SupplierProductService(EcoHubContext dbContext)
+        private readonly ImagesHelper imagesHelper;
+
+        public SupplierProductService(EcoHubContext dbContext, ImagesHelper helper)
         {
             db = dbContext;
+            imagesHelper = helper;
         }
         public void AddNewProduct(SupplierProduct product)
         {
@@ -52,5 +56,10 @@ namespace EcoHub.Services
             return "Updated";
         }
 
+        public async Task<Root> CheckImage()
+        {
+            var res = await ImagesHelper.CheckImage();
+            return res;
+        }
     }
 }

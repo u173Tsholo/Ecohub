@@ -9,5 +9,7 @@ namespace EcoHub.Services
         public Task<string> UpdateProduct(SupplierProduct supplier);
         public void AddNewProduct(SupplierProduct product);
 
+        public Task<Root> CheckImage() ;
+
     }
 }

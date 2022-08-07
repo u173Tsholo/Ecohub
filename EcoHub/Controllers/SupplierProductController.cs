@@ -1,4 +1,5 @@
-﻿using EcoHub.Models;
+﻿using EcoHub.Helpers;
+using EcoHub.Models;
 using EcoHub.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,14 @@ namespace EcoHub.Controllers
         public void AddNewProduct(SupplierProduct supplierProduct)
         {
             _supplierProduct.AddNewProduct(supplierProduct);
+        }
+
+        [HttpGet]
+        [Route("TestMethod")]
+        public async Task<Root> TestMethod()
+        {
+
+            return await _supplierProduct.CheckImage();
         }
 
     }

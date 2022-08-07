@@ -21,7 +21,8 @@ builder.Services.AddTransient<ISupplierProductService, SupplierProductService>()
 builder.Services.AddTransient<IUserManagementService, UserManagementService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient(x => new OrderNumberGenerator());
-
+//builder.Services.AddTransient(x => new ImagesHelper());
+builder.Services.AddSingleton<ImagesHelper>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

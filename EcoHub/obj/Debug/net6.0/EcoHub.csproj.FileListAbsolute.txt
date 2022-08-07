@@ -817,3 +817,4 @@ C:\Users\thenj\Desktop\Ecohub\EcoHub\obj\Debug\net6.0\refint\EcoHub.dll
 C:\Users\thenj\Desktop\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.pdb
 C:\Users\thenj\Desktop\Ecohub\EcoHub\obj\Debug\net6.0\EcoHub.genruntimeconfig.cache
 C:\Users\thenj\Desktop\Ecohub\EcoHub\obj\Debug\net6.0\ref\EcoHub.dll
+C:\Ecohub\EcoHub\bin\Debug\net6.0\RestSharp.dll
