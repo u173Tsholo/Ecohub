@@ -1,20 +1,16 @@
 ﻿using EcoHub.Data;
-using EcoHub.Helpers;
 using EcoHub.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EcoHub.Services
 {
-    public class SupplierProductService : ISupplierProductService
+    public class SupplierService : ISupplierService
     {
         private readonly EcoHubContext db;
 
-        private readonly ImagesHelper imagesHelper;
-
-        public SupplierProductService(EcoHubContext dbContext, ImagesHelper helper)
+        public SupplierService(EcoHubContext dbContext)
         {
             db = dbContext;
-            imagesHelper = helper;
         }
         public void AddNewProduct(SupplierProduct product)
         {
@@ -46,7 +42,7 @@ namespace EcoHub.Services
         public async Task<string> UpdateProduct(SupplierProduct product)
         {
             SupplierProduct exists = await db.SupplierProducts.FindAsync(product);
-            if(exists != null)
+            if (exists != null)
             {
                 exists.Name = product.Name;
                 exists.Price = product.Price;
@@ -54,12 +50,6 @@ namespace EcoHub.Services
                 exists.Flagged = product.Flagged;
             }
             return "Updated";
-        }
-
-        public async Task<Root> CheckImage()
-        {
-            var res = await ImagesHelper.CheckImage();
-            return res;
         }
     }
 }

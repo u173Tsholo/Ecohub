@@ -19,6 +19,7 @@ builder.Services.AddDbContext<EcoHubContext>(options => options.UseNpgsql(connec
 builder.Services.AddTransient<ICustomerProductService, CustomerProductService>();
 builder.Services.AddTransient<ISupplierProductService, SupplierProductService>();
 builder.Services.AddTransient<IUserManagementService, UserManagementService>();
+builder.Services.AddTransient<ISupplierService, SupplierService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient(x => new OrderNumberGenerator());
 //builder.Services.AddTransient(x => new ImagesHelper());
